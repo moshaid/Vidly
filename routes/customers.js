@@ -1,3 +1,4 @@
+//const asyncMiddleware = require('../middleware/async');
 const auth = require('../middleware/auth');
 const {Customer, validate} = require('../models/customer'); 
 const mongoose = require('mongoose');
