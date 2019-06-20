@@ -16,7 +16,7 @@ const express = require('express');
 const app = express();
 
 winston.add(new winston.transports.File({ filename: 'logfile.log'}));
-winston.add(winston.transports.MongoDB, {db: 'mongodb://localhost/vidly'});
+winston.add(new winston.transports.MongoDB({ db: 'mongodb://localhost/vidly'}));
 
 if (!config.get('jwtPrivateKey')){
   console.error('FATAL ERROR: jwtPrivateKey is not defined.');
